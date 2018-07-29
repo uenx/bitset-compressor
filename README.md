@@ -3,6 +3,8 @@
 
 Need ZPAQ (http://mattmahoney.net/dc/zpaq.html) installed
 
+TODO: implement usable compressor/decompressor (for now output files are missing some header information )
+
 ## Sample test:  
 $ node ./test_compress_range.js ./data/test_data_1.bin
 
