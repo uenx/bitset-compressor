@@ -5,46 +5,6 @@ const HuffmanEncoder = require("./huffman")
 const exec = require('await-exec')
 const fs = require('fs');
 
-function findBitSetDistributeRange(n2Pow, index, bytes, evenOdd, shrinkedMap) {
-
-	var start = Math.pow(2, n2Pow - 1)
-	var end = Math.pow(2, n2Pow)
-	var bitSetSize = 0
-	var exists = 0
-	if (n2Pow == 0) start = 0
-	for (i = start; i < end; i++) {
-		if (evenOdd == "even") {
-			if (i % 2 != 0) continue
-		}
-		if (evenOdd == "odd") {
-			if (i % 2 == 0) continue
-		}
-		// var byte_string = i.toByteString()
-		var byte_string = i
-
-		var matches = bytes.count(byte_string)
-		exists += matches
-		if (matches > 0) {
-			//only compress big sets
-			if (!shrinkedMap[bitSetSize]) {
-				shrinkedMap[bitSetSize] = 0
-			}
-			shrinkedMap[bitSetSize] += matches
-		}
-		bitSetSize++ //number of items of this bit set
-
-		if (process.options.indexOf("show_set") != -1)
-			console.log(i + " " + i.toByteString())
-
-	}
-	console.log("       " + n2Pow + " unique size :" + bitSetSize + " appearance :" + exists)
-	var resultJson = {
-		size: bitSetSize,
-		instances: exists
-	}
-	return resultJson
-}
-
 function buildBitSet(n2Pow, evenOdd) {
 
 	var start = Math.pow(2, n2Pow - 1)
