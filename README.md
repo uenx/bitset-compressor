@@ -1,5 +1,5 @@
 # bitset-compressor
-## An experiment: trying to compress data taking advantage of bitsets distribution info (a specific collection of bytes)
+## An experiment: trying to compress data taking advantage of bitsets distribution info
 
 Need ZPAQ (http://mattmahoney.net/dc/zpaq.html) installed
 
