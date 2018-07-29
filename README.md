@@ -6,4 +6,4 @@ Need ZPAQ (http://mattmahoney.net/dc/zpaq.html) installed
 ## Sample test:  
 $ node ./test_compress_range.js ./data/test_data_1.bin
 
-[[https://github.com/uenx/bitset-compressor/blob/master/screenshot.png|alt=screenshot]]
+![screen_shot](https://github.com/uenx/bitset-compressor/blob/master/screenshot.png)
